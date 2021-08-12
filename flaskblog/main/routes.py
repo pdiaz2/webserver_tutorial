@@ -1,3 +1,4 @@
+import os
 from flask import render_template, request, Blueprint
 from flaskblog.models import Post
 
@@ -21,7 +22,7 @@ def about():
     # print(request.json.get("fullname"))
     # print(request.json.get("fullnam2e"))
     # return jsonify({"apellido": "diaz"}), 200
-    return render_template("about.html")
+    return os.getenv("HOLA")
 
 
 
